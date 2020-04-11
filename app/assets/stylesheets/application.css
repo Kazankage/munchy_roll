@@ -28,9 +28,10 @@
        background: rgb(223,99,0,0.4);
        margin: 0 auto;
   }
-   .font {  
-        font-family: Arial, Helvetica, sans-serif ,Arial,sans-serif;
-   }
+  .font {  
+    font-family: Arial, Helvetica, sans-serif ,Arial,sans-serif;
+}
+  
    .enter {
        position: absolute;
        top: 50%;
@@ -84,13 +85,12 @@
    .manga-post{
        width: 450px;
        height: minmax(200px, auto);
-       padding: 10px;
+       padding: 15px;
        border-radius: 10px;
        background: rgb(223,99,0,0.4);
        box-sizing: border-box;
    }
 
- 
     .link-to-colour {
        color: #df6300;
     }
