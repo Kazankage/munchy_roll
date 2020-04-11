@@ -29,7 +29,7 @@ class ReviewsController < ApplicationController
 
     def show
        @review = Review.find_by_id(params[:id])
-       #@manga = Manga.find(params[:id])
+      
     end
 
     def edit
