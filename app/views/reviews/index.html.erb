@@ -14,9 +14,9 @@
 <p> 
 <h5><p> - <%= review.summary %></h5>
 
-- <%= link_to "Edit", edit_review_path(review)%>
+- <%= link_to "Edit", edit_review_path(review)%> | <%= link_to "Delete", review, method: :delete, data: { confirm: "Are you sure you want to delete this manga?"}%>
 <p>
 </div><br>
 <% end %>
 
-<%#<h3><p>  Write a <%= link_to "new review", new_review_path %> <%#about a manga!</h3>%>
+<h3><p>  Write a <%= link_to "new review", new_review_path %> about a manga!</h3>
