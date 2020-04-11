@@ -1,0 +1,24 @@
+<h2>Here is a list all of the manga in the Munchy Roll collection! </h2>
+ <%= render "shared/flasherror"%> 
+
+    <%# @manga.id.each do |manga| %>
+  
+          <div class="manga-post" >
+        <h2><%= link_to @manga.series, @manga.link, :target => "_blank"%><p></h2>
+        <%= image_tag(@manga.picture, :width => 300, :height => 250) if @manga.picture.attached?%><p>
+        - Publisher: <%= @manga.publishers%> <p>
+        - Summary: <%= @manga.description%> <p>
+        - Genre: <%= @manga.genre.name %> <p>
+        - Posted by: <%= @manga.user.username%><p>
+        - <%= link_to "Edit", edit_manga_path(@manga)%> | <%= link_to "Delete", @manga, method: :delete, data: { confirm: "Are you sure you want to delete this manga?"}%><p><p>
+        
+        
+        - Write a <%= link_to "review", new_manga_review_path(@manga.id)%>
+     <p>
+    </div><br>
+  <%# end %>
+
+
+<h3>
+<p>
+  Add a <%= link_to "New Manga", new_manga_path %> to the collection. </h3>
