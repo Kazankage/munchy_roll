@@ -52,7 +52,7 @@ class MangasController < ApplicationController
                 redirect_to mangas_path
             else
                 flash[:error] = "Baka! You may only delete your own manga!"
-                redirect_to '/'
+                redirect_to mangas_path, method: :get
             end
     end
 

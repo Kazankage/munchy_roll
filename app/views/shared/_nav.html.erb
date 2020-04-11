@@ -3,8 +3,8 @@ Munchy Roll! Hello <%= current_user.username || current_user.email if current_us
 <div class ="nav-box">
 
 <%= link_to 'Home', user_path(current_user) if current_user %> |
-<%= link_to 'New Manga', new_manga_path %> |
 <%= link_to "All Manga", mangas_path %> |
+<%= link_to 'New Manga', new_manga_path %> |
 <%= link_to "All Reviews", reviews_path %> |
 <%= link_to "New Review", new_review_path %> |
 <%#= link_to "All Genres", genres_path %> 

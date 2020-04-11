@@ -52,7 +52,7 @@ class ReviewsController < ApplicationController
         @review.destroy
         else
         flash[:error] = "Baka! You may only delete your own reviews!"
-        redirect_to reviews_path
+        redirect_to new_review_path
         end
     end
 
