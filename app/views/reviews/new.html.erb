@@ -1,0 +1,45 @@
+<%= render partial: 'layouts/errors', locals: {object: @review}  %>
+<%= render "shared/flasherror"%>
+<div class ="new-review-box">
+  
+  <%= form_for(@review) do |f|%> 
+    
+    <% if params[:manga_id] %>  
+     
+     <%= f.hidden_field :manga_id %>  
+       <h1> Manga Review for <%= @manga.series %>! </h1>
+    
+    <% else %>
+      <h1><p> Create Review </h1>
+   
+   <div>
+      <p>
+      <%= f.label "Select Manga" %>
+      <%= f.collection_select :manga_id, Manga.alphabetical_order, :id, :series, include_blank: 'Select One'%>
+     
+    </div>
+  <%end %>
+  
+    <div>
+      <%= f.label :rating %>
+      <%= f.number_field :rating, min: 1, max: 5 %>
+    </div>
+
+      <p>
+    <div>
+      <%= f.label :title %> 
+      <p>
+      <%= f.text_field :title %>
+    </div>
+
+      <p>
+    <div> 
+      <%= f.label :summary %>
+      <p>
+      <%= f.text_area :summary, size: "40x5" %>
+    </div>
+
+      <p>
+      <%= f.submit "Dattebayo!" %>
+
+<%end%>
