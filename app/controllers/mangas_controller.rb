@@ -36,7 +36,7 @@ class MangasController < ApplicationController
 
     def update   
         @manga = Manga.find(params[:id])
-            if current_user == @manga.user
+            if @manga.user == current_user 
                 @manga.update(manga_params)
                 redirect_to manga_path
             else
@@ -47,7 +47,7 @@ class MangasController < ApplicationController
 
     def destroy
         @manga = Manga.find(params[:id])
-            if current_user == @manga.user
+            if  @manga.user == current_user
                 @manga.destroy
                 redirect_to mangas_path
             else

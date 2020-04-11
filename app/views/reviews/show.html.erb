@@ -1,5 +1,20 @@
 <%= render "shared/flasherror"%>
 
-<h1><%= @review.title%> - <%= @review.rating%></h1>
+<h2>Here is the review from the Munchy Roll collection!</h2>
+
+    <div class="manga-post" >
+<h3>
+ <%= @review.title%> - <%= @review.manga.series %> <p>
+ by <%= @review.user.username%>
 <p>
-<%= @review.summary%></p>
+ <%#= image_tag(@review.manga.picture, :width => 300, :height => 250) if @review.manga.picture.attached? %><p>
+<p>Rating: <%= @review.rating %> / 5</h3>
+<p> 
+<h5><p> - <%= @review.summary %></h5>
+
+- <%= link_to "Edit", edit_review_path(@review)%>
+<p>
+</div><br>
+
+
+ 

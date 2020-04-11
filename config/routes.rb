@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   get 'manga/:id' => 'mangas#show'
+  post 'reviews/:id' => 'reviews#show'
 
 
 

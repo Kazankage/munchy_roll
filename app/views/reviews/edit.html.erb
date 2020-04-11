@@ -1,6 +1,7 @@
 <%= render partial: 'layouts/errors', locals: {object: @review}  %>
+
 <%= render "shared/flasherror"%>
-  
+
   <%= form_for(@review) do |f|%> 
     
     <% if params[:manga_id] %>  
@@ -10,8 +11,10 @@
     
     <% else %>
       <h1><p> Edit Review </h1>
-   <%= render "shared/flasherror"%>
+           <div class="manga-post" >
+  
    <div>
+  
       <p>
       <%= f.label "Select Manga" %>
       <%= f.collection_select :manga_id, Manga.alphabetical_order, :id, :series, include_blank: 'Select One'%>

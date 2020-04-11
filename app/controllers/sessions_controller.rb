@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
     end
 
    def omniauth
+   
         @user = User.find_or_create_by(email: auth[:info][:email]) do |f|
             f.password = SecureRandom.hex
         end

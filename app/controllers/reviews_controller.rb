@@ -29,6 +29,7 @@ class ReviewsController < ApplicationController
 
     def show
        @review = Review.find_by_id(params[:id])
+       @manga = Manga.find(params[:id])
     end
 
     def edit
@@ -41,19 +42,21 @@ class ReviewsController < ApplicationController
                 @review.update(review_params)
                 redirect_to review_path
             else
-            flash[:error] = "Baka! You may only edit your own reviews!"
-            render :edit
+                flash[:error] = "Baka! You may only edit your own reviews!"
+                redirect_to edit_review_path(@review)
         end
     end   
 
     def destroy
         @review = Review.find(params[:id])
         if current_user == @review.user
-        @review.destroy
+            @review.destroy(review_params)
+            redirect_to reviews_path
         else
-        flash[:error] = "Baka! You may only delete your own reviews!"
-        redirect_to new_review_path
-        end
+            flash[:error] = "Baka! You may only delete your own reviews!"
+            redirect_to new_review_path
+       
+    end
     end
 
     private
