@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <link rel="stylesheet" href="app/assets/stylesheets/application.css">
+  <div class="font">
   <head>
     <title>MunchyRoll</title>
     <%= csrf_meta_tags %>
@@ -9,7 +10,9 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<div align="right">
+  <%= render "shared/nav"%>
+</div>
   <body>
     <%= yield %>
   </body>
