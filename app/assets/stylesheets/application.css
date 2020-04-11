@@ -13,3 +13,81 @@
  *= require_tree .
  *= require_self
  */
+
+ html{   
+      background: url('https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/92782326_10157445384012602_2260558553376882688_o.jpg?_nc_cat=104&_nc_sid=8024bb&_nc_ohc=FwI9gnAzgkgAX9QmdGj&_nc_ht=scontent-sjc3-1.xx&oh=13095d57039a0bcc7a8a76f768de231b&oe=5EB6E875') no-repeat  fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+ }
+ 
+  .nav-box{
+      
+       height: minmax(200px, auto);
+       width: 1420px;
+       background: rgba(254,216,177,0.5);
+       margin: 0 auto;
+  }
+   .font {  
+       font-family: Arial, Helvetica, sans-serif;
+   }
+   .enter {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%); 
+       width: 450px;
+       height:  minmax(175px, auto);
+       padding: 10px;
+       border-radius: 10px;
+       background: rgba(254,216,177,0.5);
+       box-sizing: border-box;
+       margin: 0 auto;
+       text-align: center;
+   }
+
+   .login-box {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%); 
+       width: 450px;
+       height: 175px;
+       padding: 10px;
+       border-radius: 10px;
+       background: rgba(254,216,177,0.5);
+       box-sizing: border-box;
+   }
+    .new-review-box {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%); 
+       width: minmax(200px, auto);
+       height: minmax(200px, auto);
+       padding: 10px;
+       border-radius: 10px;
+       background: rgba(254,216,177,0.5);
+       box-sizing: border-box;
+   }
+   .shared-box {
+       position: absolute;
+    
+       width: minmax(200px, auto);
+       height: minmax(200px, auto);
+       padding: 10px;
+       border-radius: 10px;
+       background: rgba(254,216,177,0.5);
+       box-sizing: border-box;
+   }
+
+   .manga-post{
+       width: 450px;
+       height: minmax(200px, auto);
+       padding: 10px;
+       border-radius: 10px;
+       background: rgba(254,216,177,0.5);
+       box-sizing: border-box;
+   }
+ 
