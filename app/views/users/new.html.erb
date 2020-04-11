@@ -1,0 +1,21 @@
+<div class= "enter">
+<%= render partial: 'layouts/errors', locals: {object: @user}  %>
+
+<h1> Sign up for Munchy Roll! </h1>
+
+<%= form_for(@user) do |f|%>
+
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+<p>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <p>
+
+  <%= f.submit "Dattebayo!" %>
+<% end %></div>
