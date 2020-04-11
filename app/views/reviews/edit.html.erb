@@ -1,18 +1,20 @@
-<%= render partial: 'layouts/errors', locals: {object: @review}  %>
-
-<%= render "shared/flasherror"%>
-
-  <%= form_for(@review) do |f|%> 
+<%= form_for(@review) do |f|%> 
     
     <% if params[:manga_id] %>  
      
      <%= f.hidden_field :manga_id %>  
        <h1>Edit Manga Review for <%= @manga.series %>! </h1>
-    
+    <%= render partial: 'layouts/errors', locals: {object: @review}  %>
+
+<%= render "shared/flasherror"%>
+
     <% else %>
       <h1><p> Edit Review </h1>
            <div class="manga-post" >
-  
+  <%= render partial: 'layouts/errors', locals: {object: @review}  %>
+
+<%= render "shared/flasherror"%>
+
    <div>
   
       <p>

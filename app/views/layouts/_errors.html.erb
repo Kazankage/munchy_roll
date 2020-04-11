@@ -1,4 +1,5 @@
 <% if object.errors.any? %>
+<div class="error-message">
   <div id="error_explanation">
     <h2><%= pluralize(object.errors.count, "error") %>! Baka! Make sure you fix them!</h2>
 
@@ -7,5 +8,6 @@
       <li><%= msg %></li>
     <% end %>
     </ul>
+  </div>
   </div>
 <% end %>

@@ -5,7 +5,7 @@
 <h2><p> Here is a list all of the manga in your collection: </h2>
 
  <% @user.mangas.each do |m| %>
-   <h3>  <%= link_to m.series, m.link, :target => "_blank"%></h3>
+   <h3>  <%= link_to m.series, m.link, class: 'link-to-colour', :target => "_blank"%></h3>
      <h5> <%= link_to "Edit", edit_manga_path(m)%> | 
         <%= link_to "Delete", m, method: :delete, data: { confirm: "Are you sure you want to delete this manga?"}%></h5> <p>
    
@@ -16,17 +16,17 @@
 <h2><p> Here is a list all of the manga in <%= @user.username || @user.email%>'s collection: </h2>
 <h3>
  <% @user.mangas.each do |m| %>
-    <%= link_to m.series, m.link, :target => "_blank"%></h3<p>
+    <%= link_to m.series, m.link, class: 'link-to-colour', :target => "_blank"%></h3<p>
      <h5> <%= link_to "Edit", edit_manga_path(m)%> | <%= link_to "Delete", m, method: :delete, data: { confirm: "Are you sure you want to delete this manga?"}%></h5>
 <%end%>
 
 <% else %>
 <h1><%= @user.username || @user.email%>'s manga collection is currently empty.</h1>
 <h2><p> Here is a list all of some reccomended manga for your collection: <p></h2></h3>
- - <%= link_to "Naruto", "https://narutoshippuden-manga.com/", :target => "_blank"%> <br>
- - <%= link_to "One Punch Man", "https://ldkmanga.com/", :target => "_blank"%> <br>
- - <%= link_to "Fruits Basket", "https://fruitsbasket-manga.com/", :target => "_blank"%> <br>
- - <%= link_to "Bleach", "https://read-bleach-manga.com/", :target => "_blank"%> <br>
+ - <%= link_to "Naruto", "https://narutoshippuden-manga.com/",class: 'link-to-colour', :target => "_blank"%> <br>
+ - <%= link_to "One Punch Man", "https://ldkmanga.com/",class: 'link-to-colour', :target => "_blank"%> <br>
+ - <%= link_to "Fruits Basket", "https://fruitsbasket-manga.com/",class: 'link-to-colour', :target => "_blank"%> <br>
+ - <%= link_to "Bleach", "https://read-bleach-manga.com/",class: 'link-to-colour', :target => "_blank"%> <br>
 
 
 <p><%end%>

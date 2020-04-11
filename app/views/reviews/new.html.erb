@@ -1,18 +1,18 @@
-<%= render partial: 'layouts/errors', locals: {object: @review}  %>
-<%= render "shared/flasherror"%>
-<div class ="new-review-box">
-  
-  <%= form_for(@review) do |f|%> 
+<%= form_for(@review) do |f|%> 
     
     <% if params[:manga_id] %>  
      
      <%= f.hidden_field :manga_id %>  
        <h1> Manga Review for <%= @manga.series %>! </h1>
-    
+        <div class ="shared-box">
+            <%= render partial: 'layouts/errors', locals: {object: @review}  %>
+            <%= render "shared/flasherror"%>
     <% else %>
       <h1><p> Create Review </h1>
-   
-   <div>
+        <div class ="shared-box">
+          <%= render partial: 'layouts/errors', locals: {object: @review}  %>
+          <%= render "shared/flasherror"%>
+          <div>
       <p>
       <%= f.label "Select Manga" %>
       <%= f.collection_select :manga_id, Manga.alphabetical_order, :id, :series, include_blank: 'Select One'%>
@@ -34,7 +34,7 @@
 
       <p>
     <div> 
-      <%= f.label :summary %>
+      <%= f.label :summary, "Review" %>
       <p>
       <%= f.text_area :summary, size: "40x5" %>
     </div>

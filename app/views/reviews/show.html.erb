@@ -4,7 +4,7 @@
 
     <div class="manga-post" >
 <h3>
- <%= @review.title%> - <%= @review.manga.series %> <p>
+ <%= @review.title%> - <%= link_to @review.manga.series, @review.manga.link, class: 'link-to-colour', :target => "_blank" %> <p>
  by <%= @review.user.username%>
 <p>
  <%#= image_tag(@review.manga.picture, :width => 300, :height => 250) if @review.manga.picture.attached? %><p>

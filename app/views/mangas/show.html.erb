@@ -1,10 +1,10 @@
-<h2>Here  a the manga from the Munchy Roll collection! </h2>
+<h2>Here is the manga from the Munchy Roll collection! </h2>
  <%= render "shared/flasherror"%> 
 
     <%# @manga.id.each do |manga| %>
   
           <div class="manga-post" >
-        <h2><%= link_to @manga.series, @manga.link, :target => "_blank"%><p></h2>
+        <h2><%= link_to @manga.series, @manga.link, class: 'link-to-colour', :target => "_blank"%><p></h2>
         <%= image_tag(@manga.picture, :width => 300, :height => 250) if @manga.picture.attached?%><p>
         - Publisher: <%= @manga.publishers%> <p>
         - Summary: <%= @manga.description%> <p>
