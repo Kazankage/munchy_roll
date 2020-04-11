@@ -52,7 +52,7 @@
        left: 50%;
        transform: translate(-50%,-50%); 
        width: 450px;
-       height: 175px;
+       height: minmax(200px, auto);
        padding: 10px;
        border-radius: 10px;
        background: rgb(223,99,0,0.4);
