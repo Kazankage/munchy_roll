@@ -40,10 +40,11 @@
   </div>
 
     <p> OR create a new genre:
-  <div>
+<p>
       <%=f.fields_for :genre do |genres| %>
       <%= genres.label :name %>
       <%= genres.text_field :name %>
+   
     <% end %>
   </div> 
     <p>
