@@ -11,14 +11,22 @@ class Manga < ApplicationRecord
   accepts_nested_attributes_for :genre
 
 
-  validates :series, presence: true
+  validates :series, uniqueness: true, presence: true
   validates :description, presence: true
-  validates :genre, presence: true
   validates :publishers, presence: true
   validate :no_repeats
 
   scope :popularity, -> {left_joins(:reviews).group(:id).order('avg(rating)')}
 
+
+  def self.search(search)
+    if search 
+      #Manga.where(series: search)
+      Manga.where(['series LIKE ? OR publishers LIKE ?', "%#{search}%","%#{search}%"])
+    else
+      @mangas = Manga.alphabetical_order
+    end
+  end
 
   def self.alphabetical_order
     order(:series)
@@ -37,3 +45,4 @@ class Manga < ApplicationRecord
   end
 
 end
+

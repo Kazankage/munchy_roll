@@ -3,53 +3,53 @@
 
 <%= form_for(@manga) do |f|%>
 <br>
-  <div>
+
       <%= f.label :series %>
       <%= f.text_field :series %>
-  </div>
+
     <p>
-  <div>
+ 
       <%= f.label :publishers %>
       <%= f.text_field :publishers %>
    
     <p>
-  <div>
+
       <%= f.label :link %>
       <%= f.text_field :link %>
-  </div>
+  
     <p>
 
-  <div> 
+
       <%= f.label :description %><p>
       <%= f.text_area :description, size: "40x5" %>
-  </div>
+  
 
     <p>
-  <div> 
+ 
       <%= f.label :picture %><p>
       <%= f.file_field :picture %>
-  </div>
+ 
 
     <p>
-  <div> 
+  
     <p>
     Select a genre: 
-    </p>
+    
       <%= f.collection_select :genre_id, Genre.all, :id, :name, include_blank: 'Select One'%> 
     
-  </div>
 
-    <p> OR create a new genre:
-<p>
-      <%=f.fields_for :genre do |genres| %>
-      <%= genres.label :name %>
+    <p> 
+    OR create a new genre:
+    <p>
+
+      <%= f.fields_for :genre do |genres| %>
+      <%= genres.label :genre %>
       <%= genres.text_field :name %>
-   
-    <% end %>
-  </div> 
+      <% end %>
+  
     <p>
 
 <br>
   <%= f.submit "Dattebayo!"  %>
-
+</div>
 <% end %>
