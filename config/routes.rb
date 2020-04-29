@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :publishers
   get '/'  => "sessions#welcome"
   
   # Login, Log Out, and Sign Up
@@ -17,6 +16,7 @@ Rails.application.routes.draw do
 
 
   resources :reviews
+  resources :publishers
   resources :mangas do
     resources :reviews, only: [:new, :index]
   end

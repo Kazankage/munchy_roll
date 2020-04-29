@@ -1,0 +1,20 @@
+index
+<h5>SEARCH: 
+<%= form_tag mangas_path, :method => 'get' do%>
+  <%= text_field_tag :search, params[:search]%>
+  <%= submit_tag "Dattebayo" %>
+<%end%></h5>
+
+controller
+@mangas = Manga.search(params[:search])
+
+model
+
+  def self.search(search)
+    if search 
+      #Manga.where(series: search)
+      Manga.where(['series LIKE ? OR publishers LIKE ?', "%#{search}%","%#{search}%"])
+    else
+      @mangas = Manga.alphabetical_order
+    end
+  end

@@ -22,10 +22,7 @@ class MangasController < ApplicationController
     end
 
     def index
-       #@mangas = Manga.alphabetical_order
-       @mangas = Manga.search(params[:search])
-       
-    
+     @mangas = Manga.alphabetical_order
     
     end
 

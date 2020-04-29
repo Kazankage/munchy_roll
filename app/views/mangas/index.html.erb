@@ -1,11 +1,6 @@
 <h1>Manga Directory:</h1>
 
-<h5>SEARCH: 
-<%= form_tag mangas_path, :method => 'get' do%>
-  <%= text_field_tag :search, params[:search]%>
-  <%= submit_tag "Dattebayo" %>
-<%end%></h5>
- 
+
   <% @mangas.each do |manga| %>
         
         <div class= "manga-post">
