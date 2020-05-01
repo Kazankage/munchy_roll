@@ -3,6 +3,7 @@ Munchy Roll! Hello <%= current_user.username || current_user.email if current_us
 <%= Time.new.strftime("%d of %B, %Y")%><br>
 <div class ="nav-box">
 
+<%= link_to 'Home', '/' if !current_user %> 
 <%= link_to 'Home', user_path(current_user) if current_user %> |
 <%= link_to "All Manga", mangas_path %> |
 <%= link_to 'New Manga', new_manga_path %> |
