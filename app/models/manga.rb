@@ -16,6 +16,7 @@ class Manga < ApplicationRecord
   validates :publishers, presence: true
   validate :no_repeats
 
+  scope :popuser, -> {left_joins(:user).group(:user_id).count.max_by{|k,v|v}[0]}
 
 
   def self.alphabetical_order
@@ -35,4 +36,3 @@ class Manga < ApplicationRecord
   end
 
 end
-

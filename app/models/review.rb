@@ -7,6 +7,6 @@ class Review < ApplicationRecord
   validates :title, presence: true
   validates :summary, presence: true 
   
-  scope :popularity, -> {left_joins(:manga).group(:id).order('avg(rating)')}
+  scope :popularity, -> {left_joins(:manga).group(:id).order('avg(rating)DESC')}
 
 end

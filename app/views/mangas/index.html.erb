@@ -13,13 +13,14 @@
         - Publishers: <%= manga.publishers %>  <p>
         - Posted by: <%= manga.user.username%><p>
         - Genre: <%= manga.genre.name%><p>
-        - <%= link_to "Edit", edit_manga_path(manga)%> | 
+        - <%= link_to "Edit", edit_manga_path(manga)%> |
         <%= link_to "Delete", manga, method: :delete, data: { confirm: "Are you sure you want to delete this manga?"}%><p><p>
         - Write a <%= link_to "review", new_manga_review_path(manga.id)%></p></div><br>
-   
+
    </div>
      <p>
     
   <% end %>
+   <%= link_to "Most Popular User", searchs_path%>
 
   <h3><p>  Add a <%= link_to "new manga", new_manga_path %>!</h3>

@@ -58,6 +58,7 @@
        border-radius: 10px;
        background: rgb(223,99,0,0.8);
        box-sizing: border-box;
+       text-align: left;
    }
     .new-review-box {
        position: absolute;

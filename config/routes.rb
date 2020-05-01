@@ -13,12 +13,12 @@ Rails.application.routes.draw do
   get 'manga/:id' => 'mangas#show'
   post 'reviews/:id' => 'reviews#show'
 
-
-
+  resources :searchs
   resources :reviews
   resources :publishers
   resources :mangas do
     resources :reviews, only: [:new, :index]
+    #resources :search, only: [:index]
   end
   resources :genres
   resources :users
