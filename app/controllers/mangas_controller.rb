@@ -62,6 +62,8 @@ class MangasController < ApplicationController
             end
     end
 
+  
+
     private
 
     def manga_params
